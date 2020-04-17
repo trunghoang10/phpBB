@@ -1,0 +1,148 @@
+ĐỀ TÀI: TÌM HIỂU VÀ TRIỂN KHAI PHPBB
+A . Danh sách đề tài và công việc
+Họ & Tên	MSSV	Công việc	Tiến độ
+Hoàng Hiếu Trung	175A071217	- Tìm hiểu đề tài về PHPBB
+- Ưu & nhược điểm của PHPBB
+- So sánh các phần mềm tạo forum tốt nhất
+- Cài đặt demo PHPBB bao gồm:
+
+- Hướng dẫn sử dụng	Đã hoàn thiện:
+- Tìm hiểu về phpBB
+- Ưu & nhược điểm của phpBB
+
+B. Nội dung nghiên cứu
+I. Tìm hiểu về phpBB
+- phpBB là gói phần mềm để xây dựng các diễn đàn, là một phần mềm miễn phí được nhiều website sử dụng
+- phpBB được viết bằng PHP có sử dụng cơ sử dữ liệu như MySQL,…
+- phpBB viết tắt của PHP Bulletin Board
+- phpBB phát hành theo giấy phép mã nguồn mở GNU General Public License
+1.  Một chút lịch sử:
+- phpBB lần đầu tiên được tạo ra bởi James Atkinson (theFinn) vào 6/2000 trong vai trò là một diễn đàn cho vợ. Sauk hi phát hành cho công chúng thông qua SourceForge, nó trở nên phổ biến rất nhanh chóng, đến tháng 12 thì v1.0.0 được phát hành.
+- Hai phiên bản chính 1.2 và 1.4 được phát hành vào 2/2001 và 4/2001. Trong thời gian này nhóm phát triển thêm Bart van Bragt (BartVB) và Paul S. Owen (psoTFX).
+- Phiên bản 2.0.x bắt đầu vào 2/2001 , phpBB2 được xây dựng hoàn toàn từ đầu và mất 1 năm để hoàn thành. Dòng phiên bản 2.0.x của phpBB đã khiến mã nguồn mở này trở nên nổi tiếng trên thế giới.
+- Phiên bản 2.2 của phpBB được bất đầu ngay lập tức và tiếp tục xây dựng trong những năm sau. Vào ngày 14/1/2005, dòng phiên bản mới 3.0.0 với tên gọi “Olympus” được phát triển và xây dựng.
+- Phiên bản dung thử phpBB3 beta5 được công bố vào 3/2007. Phiên bản RC, đánh dấu đầy đủ hỗ trợ cho dòng 3.0, đã được phát hành 5/2007. phpBB 3.0.0 được phát hành vào 13/10/2007.
+- Tại Việt Nam phpBB rất phổ biến, nó cũng là phần mềm diễn đàn được tích hợp mặc định trong NukeViet CMS các phiên bản từ 1.0 đến 2.0 RC.
+2.  Các phiên bản phpBB
+a. phpBB3 (là phiên bản mới nhất của phpBB)
+- Một vài tính năng của phpBB3:
+⦁	Thiết kế tách biệt Admin Control Panel, Moderator Contral Panel và User Control Panel
+⦁	Hỗ trợ nhiều cơ sở dữ liệu như: MySQL, Microsoft SQL Server, Oracle, PostgreSQL, SQLite, Firebird, Openlink Virtuoso và các loại ODBC- accessible DBMS
+⦁	Hỗ trợ không giới hạn subforums (chuyên mục con)
+⦁	Cho phép tùy chỉnh BBCode
+⦁	Cho phép tùy chỉnh – thêm bớt các trường quản lý dữ liệu thành viên
+⦁	Cấp phép hệ thống đa cấp
+- phpBB3 cũng cung cấp một loạt các công cụ cấp phép cực mạnh nên việc sử dụng chúng cũng phức tạp hơn. Do đó nhiều webmaster thấy sợ việc quản lý hơn so với sử dụng phpBB2.
+- phpBB3 sử dụng giao diện mặc định là prosilver. Suốt quá trình phát triển, giao diện này được giữ bí mật và chỉ được công bố trong bản phpBB 3.0.0 chính thức, tuy nhiên những tính năng của nó được đưa vào phiên bản truyền thống là subSilver trước đó. Theo đó, cấu trúc lập trình của nó đã được thay đổi hoàn toàn so với phpBB2, đặc biệt người sử dụng có thể tùy chỉnh giao diện trong Admin Control Panel.
+b. phpBB2 (Tiền thân của phpBB3)
+- Phát triển trong thời gian 2001-2002, mã nguồn được viết để tương thích với php 3.0 và 4.0. Trong lần phát hành phpBB3 vào 2007, nhóm phát triển đã lên kế hoạch ngưng hỗ trợ 2.0.x sau khi ra mắt 3.0.0.
+- phpBB2 chính thức bị ngưng hỗ trợ ngày 1/1/2009 và diễn đàn chính thức hỗ trợ 2.0.x đã bị đóng lại. Tuy nhiên việc hỗ trợ vẫn được thực hiện bởi một số website khác như NukeViet 2.0 RC2 phát hành 07/07/2009 vẫn hỗ trợ phpBB2.
+- Một vài tính năng của phpBB2:
+⦁	Hệ thống giao diện được thiết kế nhằm tách biệt mã PHP và HTML giúp dễ dàng trong thiết kế.
+⦁	Hỗ trợ nhiều giao diện ngôn ngữ: 48 bản dịch ngôn ngữ cho phpBB2 tính đến 2007
+⦁	Tương thích với nhiều cơ sở dữ liệu gồm MySQL, PostgreSQL, Microsoft SQL Server và Microsoft Access
+⦁	Dễ tùy biến bằng cách sử dụng các MODs và giao diện.
+3. MODs:
+- MODs là những sửa đổi (modifications) tạo ra bởi cộng đồng sử dụng phpBB nhằm mở rộng các tính năng cho hệ thống. Thuật ngữ MOD được viết hoa 3 ký tự đầu của modifications để phân biệt với người quản lý diễn đàn (moderator – Điều hành viên). Các bản MOD được chia sẻ trên phpBB.com sẽ được kiểm tra bở đội Mod và được xác nhận sử dụng an toàn.
+- Việc thực hiện các MOD cho phpBB thường được gọi là hackmod.
+a. MODX:
+- là một chuẩn XML- định dạng tài liệu phát hành bởi phpBB MOD Team, nó sử dụng để mô tả cách thay đổi hệ thống phpBB trong việc thực hiện các sửa đổi.
+- phpBB MOD Team khuyến cáo tất cả các MOD của phpBB3 cập nhật cơ sở dữ liệu MOD theo chuẩn trình bày và đóng gói mới nhất của MODX. Mục đích của việc thống nhất chuẩn định dạng XML nhằm dễ dàng cho việc cài MOD bằng công cụ tự động (AutoMOD).
+b. AutoMOD:
+- là một công cụ phát triển bởi phpBB MOD Team dùng để cài đặt tự động các gói MODs của phpBB3 (sử dụng định dạng MODX.
+- Người dùng chỉ cần tải các MOD lên thư mục được yêu cầu của AutoMOD rồi chạy AutoMOD. Hệ thống sẽ đọc và chạy các lệnh cần thiết. Tùy thuộc vào cấu hình máy chủ nó sẽ tự động trộn các thay đổi vào vị trí thích hợp bằng cách sử dụng FPT hoặc tạo ra một kho lưu trữ của các tập tin nén thay đổi cho phép người dùng sử dụng sao chép vào đúng vị trí của nó. Khi không sử dụng MOD nữa, người dùng có thể gỡ bỏ nó.
+- AutoMOD được kế thừa từ EasyMOD, một công cụ dành cho phpBB2 cũng được phát triển bởi phpBB MOD Team với chức năng tương tự.
+c. Unified MOD Installation Library (UMIL – Thống nhất Thư viện cài đặt MOD)
+- UMIL là một thư viện được thiết kế đơn giản hóa quá trình cài đặt và gỡ bỏ CSDL của MODs. Nó được thiết kế để hữu hiệu hóa việc cấu hình diễn đàn khi cài các MOD mới, thực hiện các thao tác với CSDL như thêm và xóa các bảng cột, xóa cache (bộ nhớ tạm) của diễn đàn. UMIL được phát hành theo giấy phép mã mở GPL. Để tạo UMIL- file tự động, tác giả của MOD cần sử dụng Unified MOD Installation File creation tool
+4. phpBB ngày nay:
+- phpBB có một cộng đồng người dùng đóng góp cho dự án tổng thể với nội dung như Tiện ích mở rộng, MOD và Kiểu. Họ cũng cung cấp hỗ trợ bổ sung dưới dạng hỗ trợ cho Nhóm hỗ trợ phpBB. Người dùng trong cộng đồng được khuyến khích tham gia vào các yêu cầu hỗ trợ này và đóng góp vào việc cải thiện tổng thể mã lõi phpBB
+5. Tìm hiểu thêm:
+* Phiên bản RC (Release Candidate) là phiên bản cho dùng thử trước khi sản phẩm chính thức ra đời
+
+* Thông tin các Internet forum software
+
+
+
+	Người sáng tạo	Ngày phát hành mới nhất	Phiên bản ổn định hiện tại	Ngôn ngữ lập trình	Giấy phép
+bbPress	Nền tảng wordpress	04-09-2019	5.2.3	PHP	GPL
+Beehive Forum	Nhà phát triển dự án Beehive	05-11-2016	1.5.2	PHP	GPL
+Discourse	Bộ công cụ xây dựng nghị luận văn minh	06-11-2019	2.3.6	Ruby, JavaScript	GPL
+Discuz!	Comsenz Inc	01-01-2018	X3.4	PHP	Discuz! EULA (độc quyền, miễn phí cho sử dụng phi thương mại)
+FluxBB	Nhà phát triển FluxBB.org	31-12-2018	1.5.11	PHP	GPL
+FUDforum	Thiết kế Internet tiên tiến Inc	09-04-2018	3.0.9	PHP	GPL
+Ikonboard	Matt Mecham (người sáng lập ban đầu) Joshua Johnson	19-10-2012	3.1.5A	Perl	Độc quyền
+Invision Power Board	Invision Power Services Inc	12-06-2019	4.4.4	PHP	Độc quyền
+MyBB	Nhóm MyBB	30-12-2019	1.8.22	PHP	LGPL, moving to BSD in 2.0
+Phorum	Brian Moon	23-08-2017	5.2.23	PHP	Phorum License 2 (BSD like)
+phpBB	phpBB Ltd.	06-01-2020	3.3.0	PHP	GPL
+PunBB	PunBB	14-10-2015	1.4.4	PHP	GPL
+Simple Machines Forum	Simple Machines	30-12-2019	2.0.17	PHP	BSD License
+Syndie	Anonymous (có liên quan tới I2P)	14-08-2014	1.107b	Java	Open source, multiple licenses
+Thredded	Joel Oliveira, Gleb Mazovetskiy, et al.	17-08-2019	0.16.13	Ruby	MIT
+Vanilla Forums	Vanilla Forums	15-03-2019	2.8.1	PHP	Proprietary/GPL
+vBulletin	vBulletin Solutions Inc	14-05-2019	5.5.2	PHP	Proprietary
+XenForo	XenForo Limited, Kier Darby, Mike Sullivan	06-11-2019	2.1.5	PHP	Proprietary
+
+II. Ưu & Nhược điểm của phpBB
+1. Ưu điểm:
+- Tối ưu về tốc độ
+- Ít tốn băng thông và dung lượng host
+- Có nhiều MODs không thua kém vBB và các gói phần mềm tương tự. Nó cho phép người dùng có thể tạo ra rất nhiều chủ đề, quản lý hàng ngàn người dùng, người dùng có thể tuỳ chỉnh hồ sơ cá nhân và các bài viết, việc tích hợp thêm các tiện ích Extension hay lựa chọn theme cho diễn đàn cũng rất dễ dàng.
+- Hỗ trợ nhiều loại cơ sở dữ liệu
+2. Nhược điểm:
+- Hệ thống MOD không phong phú, các giao diện dường như đã trở nên lỗi thời
+- Khó cài MOD, dễ gặp lỗi trong quá trình cài đặt
+- Việc nâng cấp lên phiên bản mới tương đối phức tạp
+
+III. So sánh các phần mềm tạo forum tốt nhất
+Forum (diễn đàn) là một trong các sản phẩm trọng yếu sinh ra từ internet. Ngày nay, bạn có thể dễ dàng tạo ra một forum và tương tác ngay với người dùng hay để họ tương tác với nhau.
+
+Phần mềm tạo forum tốt nhất cần có các tính năng gì?
+Hầu hết các diễn đàn online đều có cách quản lý trực tiếp: “Chúng cho phép bạn đăng ký tài khoản, tạo chủ đề, đăng bài viết trả lời” và đều có hệ thống phân quyền người dùng, vì thế bạn có thể có admin và moderator để quản lý site, người dùng bình thường thì có ít quyền hạn hơn.
+Bên cạnh những tính năng cơ bản thì bạn cần để tâm đến nhiều tính năng khác để lựa chọn được phần mềm forum tốt nhất cho trải nghiệm người dùng đạt được hiệu quả tốt
+⦁	Có khả năng chỉnh sửa trang cá nhân: cho phép người dùng điều chỉnh trang cá nhân để tăng tính gắn kết với trang => cảm thấy đây là một thế giới của mình và có toàn quyền trên đó
+⦁	Phần mềm chỉnh sửa mạnh mẽ: diễn đàn là dạng site 100% nền văn bản, vì vậy bạn cần có editor mạnh mẽ để tạo và điều chỉnh bài viết.
+⦁	Tin nhắn riêng: nhiều diễn đàn đều có bình luận công khai nếu bạn kích hoạt tin nhắn riêng thì nó sẽ tăng tính cá nhân cả diễn đàn và người dùng cũng có thể gửi tin nhắn qua lại với nhau.
+Danh sách phần mềm tạo forum tốt hiện nay
+1. phpBB
+ 
+phpBB là một nền tảng diễn đàn linh hoạt, bạn có thể tạo chủ đề và người dùng có thể nhắn tin riêng. Khi bạn cài đặt xong diễn đàn bạn có thể tạo bao nhiêu chủ đề tuỳ thích. Tool này có thể giúp bạn quản lý hàng ngàn người dùng, đặc biệt là khi bạn đang sử dụng một dịch vụ hosting hàng đầu.
+Bên cạnh các chức năng cơ bản, nó cũng cho phép thêm extension và thêm chức năng forum của bạn. Có hàng trăm extension có sẵn để dùng, tất cả đều liên quan đến các chức năng cộng thêm của diễn đàn.
+phpBB cũng có hệ thống chọn theme, để bạn sử dụng để đổi giao diện forum. Hơn nữa, người dùng có thể lựa chọn để tuỳ biến trang cá nhân và trang viết bài của họ. Cuối cùng, đây là mã nguồn mở và có cộng đồng người dùng sôi nổi.
+ Ưu điểm:
+⦁	Software forum mạnh mẽ hỗ trợ nhiều cấp độ
+⦁	Giúp người dùng tuỳ chỉnh bài viết trên trang cá nhân
+⦁	Có quyền truy cập vào các lựa chọn hiện đại
+⦁	Giúp thiết lập extension và themes để tuỳ biến forum
+⦁	ls very responsive out-of-the-box
+Nhược điểm:
+⦁	Hầu hết các theme phpBB đều có vẻ hơi lỗi thời so với 2020
+2. MyBB
+ 
+Các tính năng của forum mà bạn muốn là: tạo chủ đề, giúp thành viên đăng ký và quản lý người dùng.
+Thay vì nhắc đến các tính năng trên thì ta sẽ tập trung nói đến sự khác biệt giữa các nền tảng còn lại
+MyBB có nhiều tính năng giống với phpBB, nó cũng có plugin và themes cùng với một cộng đồng người dùng tốt. Phần mềm cũng dễ sử dụng.
+Khác biệt là MyBB không có nhiều extensions. Tuy nhiên, nó hơn phpBB ở hình thức forum trông hiện đại hơn và người dùng sẽ cảm thấy dễ chịu hơn khi sử dụng
+Ưu điểm:
+⦁	Nền tảng mã nguồn mở, có đầy đủ tính năng cơ bản bạn cần
+⦁	Giúp thiết lập plugin và themes để tuỳ chỉnh diễn đàn của bạn
+⦁	Có hệ thống ghi điểm cho thành viên sẵn
+⦁	Dễ dàng sử dụng lịch và đặt hẹn sự kiện
+Nhược điểm:
+⦁	Không mạnh mẽ bằng phpBB
+3. WordPress
+ 
+WordPress là phần mềm CMS mã nguồn mở lớn nhất trên thế giới, nền tảng này có thể tạo ra gần như mọi loại website, từ một blog đơn giản đến một cửa hàng online, nhờ vào hệ thống plugin khổng lồ của nó.
+Dĩ nhiên, bạn cũng có thể tạo forum bằng WordPress nhờ vào các plugin như Asgaros Forum, wpForo Forum hay bbPress. Bất kỳ plugin nào trong số này cũng có thể giúp bạn tạo một diễn đàn đầy đủ tính năng cơ bản -> thậm chí còn hơn.
+WordPress là CMS đặc biệt và là phần mềm tốt nhất để tạo ra một website thông thường có diễn đàn kèm theo.
+Ưu điểm:
+⦁	Có hệ thống plugin và themes lớn nhất thế giới web
+⦁	Cực kỳ dễ dàng sử dụng
+⦁	Giúp bạn tạo website thông thường kết hợp với diễn đàn
+⦁	Dễ dàng kết hợp với các plugin forum để tạo trải nghiệm cá nhân
+Nhược điểm:
+⦁	Nền tảng này không chuyên cho forum vì thế bạn cần tuỳ chỉnh khá nhiều để nó vận hành đúng như mong muốn
+4. Joomla!
+ 
+Joomla! là một CMS khác có thể giúp bạn tạo ra nhiều loại website bao gồm cả diễn đàn online. Cũng như WordPress tính năng của nó có thể mở rộng bởi hệ thống plugin và themes lớn. Nó có khả năng tuỳ chỉnh cao.
+Sự khác biệt giữa WordPress và Joomla! là Joomla! mặc định cho bạn nhiều quyền điều khiển hơn. Nó hướng đến những người dùng có kinh nghiệm lập trình web.
