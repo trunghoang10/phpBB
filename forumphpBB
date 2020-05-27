@@ -1,148 +1,568 @@
-ĐỀ TÀI: TÌM HIỂU VÀ TRIỂN KHAI PHPBB
-A . Danh sách đề tài và công việc
-Họ & Tên	MSSV	Công việc	Tiến độ
-Hoàng Hiếu Trung	175A071217	- Tìm hiểu đề tài về PHPBB
-- Ưu & nhược điểm của PHPBB
-- So sánh các phần mềm tạo forum tốt nhất
-- Cài đặt demo PHPBB bao gồm:
+TÌM HIỂU VÀ TRIỂN KHAI PHẦN MỀM PHPBB TRÊN HỆ ĐIỀU HÀNH LINUX
 
-- Hướng dẫn sử dụng	Đã hoàn thiện:
-- Tìm hiểu về phpBB
-- Ưu & nhược điểm của phpBB
+A. Danh sách đề tài và công việc
+
+Họ & Tên
+MSSV
+Công việc
+Tiến độ
+Hoàng Hiếu Trung
+175A071217
+- Tìm hiểu một chút về hệ điều hành linux
+- Forum là gì? Để làm gì?
+- Tìm hiểu về những phần mềm forum và ưu nhược điểm của các phần mềm đó
+- Cài đặt hệ điều hành linux trên hệ thống máy ảo (virtualBox)
+- Cài đặt phpBB
+- Hướng dẫn sử dụng
+- Tìm hiểu thêm
+Hoàn thành: 95%
+
+Chưa hoàn thành:
+Hướng dẫn sử dụng
+
 
 B. Nội dung nghiên cứu
-I. Tìm hiểu về phpBB
-- phpBB là gói phần mềm để xây dựng các diễn đàn, là một phần mềm miễn phí được nhiều website sử dụng
-- phpBB được viết bằng PHP có sử dụng cơ sử dữ liệu như MySQL,…
-- phpBB viết tắt của PHP Bulletin Board
-- phpBB phát hành theo giấy phép mã nguồn mở GNU General Public License
-1.  Một chút lịch sử:
-- phpBB lần đầu tiên được tạo ra bởi James Atkinson (theFinn) vào 6/2000 trong vai trò là một diễn đàn cho vợ. Sauk hi phát hành cho công chúng thông qua SourceForge, nó trở nên phổ biến rất nhanh chóng, đến tháng 12 thì v1.0.0 được phát hành.
-- Hai phiên bản chính 1.2 và 1.4 được phát hành vào 2/2001 và 4/2001. Trong thời gian này nhóm phát triển thêm Bart van Bragt (BartVB) và Paul S. Owen (psoTFX).
-- Phiên bản 2.0.x bắt đầu vào 2/2001 , phpBB2 được xây dựng hoàn toàn từ đầu và mất 1 năm để hoàn thành. Dòng phiên bản 2.0.x của phpBB đã khiến mã nguồn mở này trở nên nổi tiếng trên thế giới.
-- Phiên bản 2.2 của phpBB được bất đầu ngay lập tức và tiếp tục xây dựng trong những năm sau. Vào ngày 14/1/2005, dòng phiên bản mới 3.0.0 với tên gọi “Olympus” được phát triển và xây dựng.
-- Phiên bản dung thử phpBB3 beta5 được công bố vào 3/2007. Phiên bản RC, đánh dấu đầy đủ hỗ trợ cho dòng 3.0, đã được phát hành 5/2007. phpBB 3.0.0 được phát hành vào 13/10/2007.
-- Tại Việt Nam phpBB rất phổ biến, nó cũng là phần mềm diễn đàn được tích hợp mặc định trong NukeViet CMS các phiên bản từ 1.0 đến 2.0 RC.
-2.  Các phiên bản phpBB
-a. phpBB3 (là phiên bản mới nhất của phpBB)
-- Một vài tính năng của phpBB3:
-⦁	Thiết kế tách biệt Admin Control Panel, Moderator Contral Panel và User Control Panel
-⦁	Hỗ trợ nhiều cơ sở dữ liệu như: MySQL, Microsoft SQL Server, Oracle, PostgreSQL, SQLite, Firebird, Openlink Virtuoso và các loại ODBC- accessible DBMS
-⦁	Hỗ trợ không giới hạn subforums (chuyên mục con)
-⦁	Cho phép tùy chỉnh BBCode
-⦁	Cho phép tùy chỉnh – thêm bớt các trường quản lý dữ liệu thành viên
-⦁	Cấp phép hệ thống đa cấp
-- phpBB3 cũng cung cấp một loạt các công cụ cấp phép cực mạnh nên việc sử dụng chúng cũng phức tạp hơn. Do đó nhiều webmaster thấy sợ việc quản lý hơn so với sử dụng phpBB2.
-- phpBB3 sử dụng giao diện mặc định là prosilver. Suốt quá trình phát triển, giao diện này được giữ bí mật và chỉ được công bố trong bản phpBB 3.0.0 chính thức, tuy nhiên những tính năng của nó được đưa vào phiên bản truyền thống là subSilver trước đó. Theo đó, cấu trúc lập trình của nó đã được thay đổi hoàn toàn so với phpBB2, đặc biệt người sử dụng có thể tùy chỉnh giao diện trong Admin Control Panel.
-b. phpBB2 (Tiền thân của phpBB3)
-- Phát triển trong thời gian 2001-2002, mã nguồn được viết để tương thích với php 3.0 và 4.0. Trong lần phát hành phpBB3 vào 2007, nhóm phát triển đã lên kế hoạch ngưng hỗ trợ 2.0.x sau khi ra mắt 3.0.0.
-- phpBB2 chính thức bị ngưng hỗ trợ ngày 1/1/2009 và diễn đàn chính thức hỗ trợ 2.0.x đã bị đóng lại. Tuy nhiên việc hỗ trợ vẫn được thực hiện bởi một số website khác như NukeViet 2.0 RC2 phát hành 07/07/2009 vẫn hỗ trợ phpBB2.
-- Một vài tính năng của phpBB2:
-⦁	Hệ thống giao diện được thiết kế nhằm tách biệt mã PHP và HTML giúp dễ dàng trong thiết kế.
-⦁	Hỗ trợ nhiều giao diện ngôn ngữ: 48 bản dịch ngôn ngữ cho phpBB2 tính đến 2007
-⦁	Tương thích với nhiều cơ sở dữ liệu gồm MySQL, PostgreSQL, Microsoft SQL Server và Microsoft Access
-⦁	Dễ tùy biến bằng cách sử dụng các MODs và giao diện.
-3. MODs:
-- MODs là những sửa đổi (modifications) tạo ra bởi cộng đồng sử dụng phpBB nhằm mở rộng các tính năng cho hệ thống. Thuật ngữ MOD được viết hoa 3 ký tự đầu của modifications để phân biệt với người quản lý diễn đàn (moderator – Điều hành viên). Các bản MOD được chia sẻ trên phpBB.com sẽ được kiểm tra bở đội Mod và được xác nhận sử dụng an toàn.
-- Việc thực hiện các MOD cho phpBB thường được gọi là hackmod.
-a. MODX:
-- là một chuẩn XML- định dạng tài liệu phát hành bởi phpBB MOD Team, nó sử dụng để mô tả cách thay đổi hệ thống phpBB trong việc thực hiện các sửa đổi.
-- phpBB MOD Team khuyến cáo tất cả các MOD của phpBB3 cập nhật cơ sở dữ liệu MOD theo chuẩn trình bày và đóng gói mới nhất của MODX. Mục đích của việc thống nhất chuẩn định dạng XML nhằm dễ dàng cho việc cài MOD bằng công cụ tự động (AutoMOD).
-b. AutoMOD:
-- là một công cụ phát triển bởi phpBB MOD Team dùng để cài đặt tự động các gói MODs của phpBB3 (sử dụng định dạng MODX.
-- Người dùng chỉ cần tải các MOD lên thư mục được yêu cầu của AutoMOD rồi chạy AutoMOD. Hệ thống sẽ đọc và chạy các lệnh cần thiết. Tùy thuộc vào cấu hình máy chủ nó sẽ tự động trộn các thay đổi vào vị trí thích hợp bằng cách sử dụng FPT hoặc tạo ra một kho lưu trữ của các tập tin nén thay đổi cho phép người dùng sử dụng sao chép vào đúng vị trí của nó. Khi không sử dụng MOD nữa, người dùng có thể gỡ bỏ nó.
-- AutoMOD được kế thừa từ EasyMOD, một công cụ dành cho phpBB2 cũng được phát triển bởi phpBB MOD Team với chức năng tương tự.
-c. Unified MOD Installation Library (UMIL – Thống nhất Thư viện cài đặt MOD)
-- UMIL là một thư viện được thiết kế đơn giản hóa quá trình cài đặt và gỡ bỏ CSDL của MODs. Nó được thiết kế để hữu hiệu hóa việc cấu hình diễn đàn khi cài các MOD mới, thực hiện các thao tác với CSDL như thêm và xóa các bảng cột, xóa cache (bộ nhớ tạm) của diễn đàn. UMIL được phát hành theo giấy phép mã mở GPL. Để tạo UMIL- file tự động, tác giả của MOD cần sử dụng Unified MOD Installation File creation tool
-4. phpBB ngày nay:
-- phpBB có một cộng đồng người dùng đóng góp cho dự án tổng thể với nội dung như Tiện ích mở rộng, MOD và Kiểu. Họ cũng cung cấp hỗ trợ bổ sung dưới dạng hỗ trợ cho Nhóm hỗ trợ phpBB. Người dùng trong cộng đồng được khuyến khích tham gia vào các yêu cầu hỗ trợ này và đóng góp vào việc cải thiện tổng thể mã lõi phpBB
-5. Tìm hiểu thêm:
-* Phiên bản RC (Release Candidate) là phiên bản cho dùng thử trước khi sản phẩm chính thức ra đời
+Tìm hiểu một chút về hệ điều hành Linux
+Linux là tên gọi của một hệ điều hành máy tính và cũng là tên hạt nhân (kernel) của hệ điều hành.
+Phiên bản Linux đầu tiên do Linus Torvalds viết vào năm 1991, lúc ông còn là một sinh viên của trường đại học Helsinki tại Phần Lan. Ông cho ra đời phiên bản Linux 1.0 vào năm 1994. Bộ phận chủ yếu này được phát triển và tung ra thị trường dưới bản quyền GNU General Public License. Do đó mà bất cứ ai cũng có thể tải về và xem mã nguồn của Linux
+Chính xác hơn thì thuật ngữ “Linux” được sử dụng để chỉ “Nhân Linux”, nhưng tên này được sử dụng rộng rãi để miêu tả tổng thể một hệ điều hành tương tự UNIX (còn được biết đến với cái tên GNU/Linux) được tạo ra bởi việc đóng gói nhân Linux cùng với các thư viện và công cụ GNU, cũng như là các bản phân phối Linux. Thực tế thì đó là tập hợp một số lượng lớn các phần mềm như máy chủ web, các ngôn ngữ lập trình, các hệ quản trị cơ sở dữ liệu, các môi trường desktop như GNOME và KDE và các ứng dụng thích hợp cho công việc văn phòng như OpenOffice, LibreOffice
+Khởi đầu Linux được phát triển cho dòng vi xử lý 386, hiện tại hệ điều hành này hỗ trợ một số lượng lớn các kiến trúc vi xử lý và được sử dụng trong nhiều ứng dụng khác nhau từ máy tính cá nhân cho tới các siêu máy tính và các thiết bị nhúng như các máy điện thoại di động
+Ban đầu Linux được phát triển và sử dụng bởi những người đam mê. Tuy nhiên hiện nay Linux đã có được sự hỗ trợ bởi các công ty lớn (IBM & Hewlett-Packard) đồng thời nó cũng bắt kịp được các phiên bản Unix độc quyền và thậm chí là một  thách thức đối với sự thống trị của Microsoft Windows trong một số lĩnh vực. Linux đạt được những thành công một cách nhanh chóng là nhờ vào các đặc tính nổi bật so với các hệ thống khác: “chi phí phần cứng thấp, tốc độ cao (khi so sánh với các phiên bản UNIX độc quyền) và khả năng bảo mật tốt, độ tin cậy cao (khi so sánh với Windows), giá thành rẻ không bị phụ thuộc vào nhà cung cấp”. Một đặc tính nổi trội khác là được phát triển bởi một mô hình phát triển phần mềm nguồn mở hiệu quả
+Về việc phát triển
+Sự khác nhau cơ bản giữa Linux và nhiều hệ điều hành khác là nhân Linux và các phần mềm khác đều là phần mềm tự do và mã nguồn mở.
+Vài giấy phép phần mềm tự do và mã nguồn mở dựa trên copyleft, một vài công việc bắt nguồn từ một phần copyleft cũng được copyleft chính nó. Giấy phép thông dụng nhất của phần mềm tự do là giấy phép cung GNU (the GNU General Public License - GPL), một dạng của copyleft và được sử dụng cho nhân Linux và nhiều phần tử dự án GNU
+Các bản phân phối Linux được các nhà phát triển cho phép giao tiếp với các hệ điều hành khác và thành lập tiêu chuẩn tính toán. Hệ thống linux gắn chặt với các chuẩn POSIX, SUS, LSB, ISO và ANSI trong khả năng có thể
+Nhiều bản phân phối Linux, quản lý tập hợp các gói phần mềm hệ thống và phần mềm ứng dụng từ xa, có thể tải và cài đặt thông qua kết nối mạng. Điều này cho phép người dùng thích ứng với hệ điều hành của họ theo những nhu cầu cần thiết. Các bản phân phối đều được duy trì bởi các cá nhân, các nhóm, tổ chức tình nguyện và các công ty. Một bản phân phối được thiết đặt riêng nhân Linux, bảo mật hệ thống chung và nhiều các gói phần mềm cần thiết. Các bản phân phối khác nhau sử dụng các trình quản lý gói khác nhau như dpkg, Synaptic, YAST, yum, Portage để cài đặt, loại bỏ, cập nhật tất cả các phần mềm trong hệ thống.
+Các bản phân phối Linux
 
-* Thông tin các Internet forum software
+Tên bản phân phối
+Phiên bản mới nhất
+Trang web chính thức
+Ubuntu
+20.04
+http://www.ubuntu.com
+Debian
+10
+http://www.debian.org
+Elementary OS
+0.4.1 Loki
+http://www.elementaryos.org
+Ultimate Edition
+5.7
+http://www.ultimateedition.info
+Red Hat Enterprise Linux
+7.4
+http://www.redhat.com/rhel
+Chrome OS
+62.0.3202.62
+http://google.com/intl/en/chrome
+Chrome Linux
+2.4.1290
+http://getchrome.eu
+Fedora
+32
+http://www.fedoraproject.org
+SUSE Linux Enterprise Desktop
+13.2
+http://vi.opensuse.org/
+Linux Mint
+18.2 sonya
+http://linuxmint.com
+Knoppix
+8.1
+http://www.knoppix.org
+PCLinuxOS
+2017
+http://www.pclinuxos.com
+Mandrake
+2011
+http://www.mandriva.com
+CentOS
+7
+http://www.centos.org
+Gentoo
+20170907
+http://www.gentoo.org
+Slackware
+14.2
+http://www.slackware.com
+SLAX
+7.0.8
+http://www.slax.org
+Sabayon
+17.11
+http://www.sabayon.org
+Dreamlinux
+5
+http://www.dreamlinux.info
+OpenSolaris
+11.1
+http://www.opensolaris.org
+Red Flag Linux
+6.0 SP3
+http://www.redflag-linux.com
+Puppy linux
+6.3
+http://puppylinux.org
+Hacao Linux
+2011
+http://www.hacao.com
+Asianux
+4.5
+http://www.asianux.vn
+SliTaz
+5.0 Rolling
+http://www.slitaz.org
+Linpus
+2.2
+http://www.linpus.com
+Backtrack
+5r3
+http://www.backtrack-linux.org
+BOSS Linux
+6.0 (Anoop)
+www.bosslinux.in
+Kali Linux
+2017.2
+http://www.kali.org
+Nova
+4.0 (2013)
+www.nova.cu
+Backbox
+5
+http://www.backbox.org
+Canaima GNU/Linux
+5.1
+http://canaima.softwarelibre.gob.ve
+Super Ubuntu
+11.10
+http://superubuntu.linuxfreedom.com/download.html
+Zorin OS
+12.2
+http://zorin-os.com
 
+Forum là gì? Để làm gì?
+Forum hay được biết đến là diễn đàn trực tuyến, là nơi để người dùng Internet trao đổi, thảo luận và tán gẫu với nhau về một vấn đề nào đó
+Phương thức thường được dùng trong diễn đàn trực tuyến là người đầu tiên gửi lên một chủ đề (topic, thread) trong một đề mục (category, forum) và sau đó những người tiếp theo sẽ viết những bài góp ý, thảo luận trao đổi về những thông tin liên quan đến chủ đề đó
+Trên Internet hiện nay, có nhiều phần mềm thiết kế diễn đàn trực tuyến cho phép tải về, chúng được viết bằng các ngôn ngữ lập trình khác nhau như PHP, Perl, Java hay ASP. Các dữ liệu và thông số được lưu lại trong Cơ sở dữ liệu (MySQL) hoặc text file. Có thể là phpBB và phpBB2 được sử dụng nhiều nhất vì đây là được dùng miễn phí. Còn các phần mềm phải trả phí thì có thể là vBulletin, phần mềm này được hỗ trợ và bảo mật rất tốt. Invision Power Board cũng là một trong những phần mềm được sử dụng nhiều
+Các thành phần của một diễn đàn trực tuyến
+Đề mục: là nhóm các diễn đàn có nội dung gần giống nhau gộp lại
+Diễn đàn (forum): là box gồm một nhóm các chủ đề có liên quan đến nhau. Người sử dụng có thể tạo chủ đề mới trong các diễn đàn này
+Chủ đề hoặc luồng (topic, thread): do người dùng tạo ra, quay quanh một vấn đề nào đó. Mọi người sẽ đọc những bài trong chủ đề này và viết ý kiến của mình lên ( thường gọi là các bài viết - post) cùng nhau thảo luận
+Tìm hiểu về những phần mềm forum và ưu nhược điểm của các phần mềm đó
+ phpBB
 
-
-	Người sáng tạo	Ngày phát hành mới nhất	Phiên bản ổn định hiện tại	Ngôn ngữ lập trình	Giấy phép
-bbPress	Nền tảng wordpress	04-09-2019	5.2.3	PHP	GPL
-Beehive Forum	Nhà phát triển dự án Beehive	05-11-2016	1.5.2	PHP	GPL
-Discourse	Bộ công cụ xây dựng nghị luận văn minh	06-11-2019	2.3.6	Ruby, JavaScript	GPL
-Discuz!	Comsenz Inc	01-01-2018	X3.4	PHP	Discuz! EULA (độc quyền, miễn phí cho sử dụng phi thương mại)
-FluxBB	Nhà phát triển FluxBB.org	31-12-2018	1.5.11	PHP	GPL
-FUDforum	Thiết kế Internet tiên tiến Inc	09-04-2018	3.0.9	PHP	GPL
-Ikonboard	Matt Mecham (người sáng lập ban đầu) Joshua Johnson	19-10-2012	3.1.5A	Perl	Độc quyền
-Invision Power Board	Invision Power Services Inc	12-06-2019	4.4.4	PHP	Độc quyền
-MyBB	Nhóm MyBB	30-12-2019	1.8.22	PHP	LGPL, moving to BSD in 2.0
-Phorum	Brian Moon	23-08-2017	5.2.23	PHP	Phorum License 2 (BSD like)
-phpBB	phpBB Ltd.	06-01-2020	3.3.0	PHP	GPL
-PunBB	PunBB	14-10-2015	1.4.4	PHP	GPL
-Simple Machines Forum	Simple Machines	30-12-2019	2.0.17	PHP	BSD License
-Syndie	Anonymous (có liên quan tới I2P)	14-08-2014	1.107b	Java	Open source, multiple licenses
-Thredded	Joel Oliveira, Gleb Mazovetskiy, et al.	17-08-2019	0.16.13	Ruby	MIT
-Vanilla Forums	Vanilla Forums	15-03-2019	2.8.1	PHP	Proprietary/GPL
-vBulletin	vBulletin Solutions Inc	14-05-2019	5.5.2	PHP	Proprietary
-XenForo	XenForo Limited, Kier Darby, Mike Sullivan	06-11-2019	2.1.5	PHP	Proprietary
-
-II. Ưu & Nhược điểm của phpBB
-1. Ưu điểm:
-- Tối ưu về tốc độ
-- Ít tốn băng thông và dung lượng host
-- Có nhiều MODs không thua kém vBB và các gói phần mềm tương tự. Nó cho phép người dùng có thể tạo ra rất nhiều chủ đề, quản lý hàng ngàn người dùng, người dùng có thể tuỳ chỉnh hồ sơ cá nhân và các bài viết, việc tích hợp thêm các tiện ích Extension hay lựa chọn theme cho diễn đàn cũng rất dễ dàng.
-- Hỗ trợ nhiều loại cơ sở dữ liệu
-2. Nhược điểm:
-- Hệ thống MOD không phong phú, các giao diện dường như đã trở nên lỗi thời
-- Khó cài MOD, dễ gặp lỗi trong quá trình cài đặt
-- Việc nâng cấp lên phiên bản mới tương đối phức tạp
-
-III. So sánh các phần mềm tạo forum tốt nhất
-Forum (diễn đàn) là một trong các sản phẩm trọng yếu sinh ra từ internet. Ngày nay, bạn có thể dễ dàng tạo ra một forum và tương tác ngay với người dùng hay để họ tương tác với nhau.
-
-Phần mềm tạo forum tốt nhất cần có các tính năng gì?
-Hầu hết các diễn đàn online đều có cách quản lý trực tiếp: “Chúng cho phép bạn đăng ký tài khoản, tạo chủ đề, đăng bài viết trả lời” và đều có hệ thống phân quyền người dùng, vì thế bạn có thể có admin và moderator để quản lý site, người dùng bình thường thì có ít quyền hạn hơn.
-Bên cạnh những tính năng cơ bản thì bạn cần để tâm đến nhiều tính năng khác để lựa chọn được phần mềm forum tốt nhất cho trải nghiệm người dùng đạt được hiệu quả tốt
-⦁	Có khả năng chỉnh sửa trang cá nhân: cho phép người dùng điều chỉnh trang cá nhân để tăng tính gắn kết với trang => cảm thấy đây là một thế giới của mình và có toàn quyền trên đó
-⦁	Phần mềm chỉnh sửa mạnh mẽ: diễn đàn là dạng site 100% nền văn bản, vì vậy bạn cần có editor mạnh mẽ để tạo và điều chỉnh bài viết.
-⦁	Tin nhắn riêng: nhiều diễn đàn đều có bình luận công khai nếu bạn kích hoạt tin nhắn riêng thì nó sẽ tăng tính cá nhân cả diễn đàn và người dùng cũng có thể gửi tin nhắn qua lại với nhau.
-Danh sách phần mềm tạo forum tốt hiện nay
-1. phpBB
- 
 phpBB là một nền tảng diễn đàn linh hoạt, bạn có thể tạo chủ đề và người dùng có thể nhắn tin riêng. Khi bạn cài đặt xong diễn đàn bạn có thể tạo bao nhiêu chủ đề tuỳ thích. Tool này có thể giúp bạn quản lý hàng ngàn người dùng, đặc biệt là khi bạn đang sử dụng một dịch vụ hosting hàng đầu.
 Bên cạnh các chức năng cơ bản, nó cũng cho phép thêm extension và thêm chức năng forum của bạn. Có hàng trăm extension có sẵn để dùng, tất cả đều liên quan đến các chức năng cộng thêm của diễn đàn.
 phpBB cũng có hệ thống chọn theme, để bạn sử dụng để đổi giao diện forum. Hơn nữa, người dùng có thể lựa chọn để tuỳ biến trang cá nhân và trang viết bài của họ. Cuối cùng, đây là mã nguồn mở và có cộng đồng người dùng sôi nổi.
  Ưu điểm:
-⦁	Software forum mạnh mẽ hỗ trợ nhiều cấp độ
-⦁	Giúp người dùng tuỳ chỉnh bài viết trên trang cá nhân
-⦁	Có quyền truy cập vào các lựa chọn hiện đại
-⦁	Giúp thiết lập extension và themes để tuỳ biến forum
-⦁	ls very responsive out-of-the-box
+Software forum mạnh mẽ hỗ trợ nhiều cấp độ
+Giúp người dùng tùy chỉnh bài viết trên trang cá nhân
+Có quyền truy cập vào các lựa chọn hiện đại
+Giúp thiết lập extension và themes để tùy biến forum
+ls very responsive out-of-the-box
 Nhược điểm:
-⦁	Hầu hết các theme phpBB đều có vẻ hơi lỗi thời so với 2020
-2. MyBB
- 
+Hầu hết các theme phpBB đều có vẻ hơi lỗi thời so với 2020
+b. MyBB
+
 Các tính năng của forum mà bạn muốn là: tạo chủ đề, giúp thành viên đăng ký và quản lý người dùng.
 Thay vì nhắc đến các tính năng trên thì ta sẽ tập trung nói đến sự khác biệt giữa các nền tảng còn lại
 MyBB có nhiều tính năng giống với phpBB, nó cũng có plugin và themes cùng với một cộng đồng người dùng tốt. Phần mềm cũng dễ sử dụng.
 Khác biệt là MyBB không có nhiều extensions. Tuy nhiên, nó hơn phpBB ở hình thức forum trông hiện đại hơn và người dùng sẽ cảm thấy dễ chịu hơn khi sử dụng
 Ưu điểm:
-⦁	Nền tảng mã nguồn mở, có đầy đủ tính năng cơ bản bạn cần
-⦁	Giúp thiết lập plugin và themes để tuỳ chỉnh diễn đàn của bạn
-⦁	Có hệ thống ghi điểm cho thành viên sẵn
-⦁	Dễ dàng sử dụng lịch và đặt hẹn sự kiện
+Nền tảng mã nguồn mở, có đầy đủ tính năng cơ bản bạn cần
+Giúp thiết lập plugin và themes để tuỳ chỉnh diễn đàn của bạn
+Có hệ thống ghi điểm cho thành viên sẵn
+Dễ dàng sử dụng lịch và đặt hẹn sự kiện
 Nhược điểm:
-⦁	Không mạnh mẽ bằng phpBB
-3. WordPress
- 
+Không mạnh mẽ bằng phpBB
+c. WordPress
+
 WordPress là phần mềm CMS mã nguồn mở lớn nhất trên thế giới, nền tảng này có thể tạo ra gần như mọi loại website, từ một blog đơn giản đến một cửa hàng online, nhờ vào hệ thống plugin khổng lồ của nó.
 Dĩ nhiên, bạn cũng có thể tạo forum bằng WordPress nhờ vào các plugin như Asgaros Forum, wpForo Forum hay bbPress. Bất kỳ plugin nào trong số này cũng có thể giúp bạn tạo một diễn đàn đầy đủ tính năng cơ bản -> thậm chí còn hơn.
 WordPress là CMS đặc biệt và là phần mềm tốt nhất để tạo ra một website thông thường có diễn đàn kèm theo.
 Ưu điểm:
-⦁	Có hệ thống plugin và themes lớn nhất thế giới web
-⦁	Cực kỳ dễ dàng sử dụng
-⦁	Giúp bạn tạo website thông thường kết hợp với diễn đàn
-⦁	Dễ dàng kết hợp với các plugin forum để tạo trải nghiệm cá nhân
+Có hệ thống plugin và themes lớn nhất thế giới web
+Cực kỳ dễ dàng sử dụng
+Giúp bạn tạo website thông thường kết hợp với diễn đàn
+Dễ dàng kết hợp với các plugin forum để tạo trải nghiệm cá nhân
 Nhược điểm:
-⦁	Nền tảng này không chuyên cho forum vì thế bạn cần tuỳ chỉnh khá nhiều để nó vận hành đúng như mong muốn
-4. Joomla!
- 
-Joomla! là một CMS khác có thể giúp bạn tạo ra nhiều loại website bao gồm cả diễn đàn online. Cũng như WordPress tính năng của nó có thể mở rộng bởi hệ thống plugin và themes lớn. Nó có khả năng tuỳ chỉnh cao.
+Nền tảng này không chuyên cho forum vì thế bạn cần tuỳ chỉnh khá nhiều để nó vận hành đúng như mong muốn
+d. Joomla!
+
+Joomla! là một CMS khác có thể giúp bạn tạo ra nhiều loại website bao gồm cả diễn đàn online. Cũng như WordPress tính năng của nó có thể mở rộng bởi hệ thống plugin và themes lớn. Nó có khả năng tùy chỉnh cao.
 Sự khác biệt giữa WordPress và Joomla! là Joomla! mặc định cho bạn nhiều quyền điều khiển hơn. Nó hướng đến những người dùng có kinh nghiệm lập trình web.
+Bạn cần sử dụng CMS để vận hành forum, vậy bạn cần chọn plugin tốt ví dụ như Kunena, ChronoForums và EasyDiscuss (Trả phí).
+
+Ưu điểm:
+Tùy chỉnh được nhiều khía cạnh cho website
+Có nhiều plugin forum để ta lựa chọn
+Có hệ thống bảo mật mạnh mẽ được tích hợp và tính năng SEO (tối ưu hóa tìm kiếm)
+Nhược điểm:
+Hơi khó khăn khi bắt đầu dùng so với các nền tảng khác
+Việc chọn plugin forum thì ít so với WordPress
+e. Drupal
+
+Drupal là một trong số CMS tốt nhất. Nó đặc biệt ở chỗ các quản lý khác so với WordPress và Joomla!, cũng có nhiều tính năng mặc định hơn.
+Drupal mạnh ở phần chức năng được tích hợp sẵn. Tuy nhiên những tính năng này cần bạn nghiên cứu lâu để có thể tận dụng được và sử dụng Drupal thì cũng cần có kiến thức lập trình nếu không sẽ rất mệt mỏi trong việc quản lý.
+Nền tảng này còn có một bộ sưu tập các themes và modules tốt để tùy chỉnh website. Đặc biệt là bạn không cần thêm phần mở rộng để cài đặt forum với Drupal. Nền tảng này có chức năng tạo forum được thiết kế như là tính năng gốc. Dĩ nhiên, có nhiều modules để bạn mở rộng hơn nữa chức năng của forum đó, như là Advanced Forum.
+Ưu điểm:
+Có nhiều lựa chọn chỉnh sửa
+Có nhiều chức năng cài đặt mặc định
+Có modules và themes để tăng trải nghiệm người dùng và cải thiện diễn đàn
+Nhược điểm:
+Khó học với Drupal nếu bạn chưa có kinh nghiệm làm web
+
+f. Vanilla
+
+Vanilla hỗ trợ cho cả phiên bản mã nguồn mở và premium.
+Bản premium của phần mềm forum này có giá hơi cao là $599, vì nó hướng đến khách hàng là tập đoàn, công ty. Tuy nhiên bản miễn phí của nó lại hỗ trợ nhiều hơn các tính năng thông thường của một diễn đàn mà bạn cần.
+Nền tảng này nổi bật ở chỗ nó rất đẹp. Mặc định các chủ đề bài viết được tạo ra với một giao diện tuyệt vời, bạn còn có thể kết hợp sử dụng với themes và plugins. Tuy nhiên, không có nhiều plugin miễn phí cho nền tảng này nên hầu hết là bạn cần dùng các tính năng mặc định.
+Nhưng những tính năng này đã đủ để bạn cài đặt một forum hiện đại. Nhờ vào các tính năng cơ bản của forum, bạn còn có cơ hội sử dụng các trình biên tập tốt nhất, bài viết tự động lưu.
+Ưu điểm:
+Giúp bạn tạo forum đẹp bằng theme cơ bản và hệ thống plugin
+Bạn có thể sử dụng trình biên tập văn bản hiện đại với nhiều lựa chọn
+Tự động lưu nội dung khi viết bài
+Có thể tạo group riêng cho một nhóm người dùng
+Nhược điểm:
+Bộ sưu tập themes và plugin miễn phí không đủ nhiều như bạn mong đợi
+g. Simple Machines Forum
+
+Simple Machines Forum gần giống với phpBB. Điều khiến cho phần mềm này mạnh mẽ là tính linh hoạt của hệ thống modules và themes của nó.
+Simple Machines Forum sử dụng package manager để quản lý việc cài đặt và cập nhật modules dễ. Hơn nữa, nó còn hỗ trợ tính năng thanh toán thuê bao cho người dùng diễn đàn cũng như các tính năng khác mà bạn muốn dùng khi sử dụng phần mềm forum.
+Ưu điểm:
+Cung cấp số lượng lớn modules và themes cho loại forum software
+Giúp bạn chuyển đổi đa ngôn ngữ
+Đơn giản hóa quá trình thiết lập tính năng premium subscription cho người dùng
+Nhược điểm:
+Các themes của nó có vẻ hơi lỗi thời
+Nền tảng này không hỗ trợ nhiều lựa chọn chỉnh sửa cho trang cá nhân
+h. FluxBB
+
+Các phần mềm forum trên có một điểm chung là nó đều cố gắng vượt qua đối thủ bằng tính năng. Tuy nhiên, FluxBB chỉ tập trung vào hiệu năng thay vì tính năng.
+Khi sử dụng, bạn có thể thấy FluxBB hơi ít tính năng. Nó chỉ giúp bạn tạo messaging board và vài lựa chọn quản lý. Cũng có theme và plugin nhưng không có nhiều. Nhìn chung FluxBB cho trải nghiệm tốt vfi đơn giản, nhanh và không quá phức tạp.
+Ưu điểm:
+Hiệu năng hàng đầu ngay khi bạn chưa tối ưu
+Hỗ trợ cài theme và plugins
+Có tính năng cao cấp để quản lý người dùng và hệ thống phân dạng người dùng
+Nhược điểm:
+Plugin và themes hơi ít và bị lỗi thời
+
+
+
+i. Codo Forum
+
+Codoforum là phần mềm tạo forum miễn phí được xây dựng bởi PHP và MySQL. Nhà sáng lập mong muốn rằng trải nghiệm người dùng là giá trị cốt lõi của script này. Vì vậy nó khá mượt, đơn giản, đẹp, thu hút. Tất cả những gì bạn cần để tạo một cộng đồng online đều được tìm thấy khi dùng Codoforum.
+Một trong các điểm độc đáo của script này là bạn có thể cài đặt nó lên bất kỳ server nào hỗ trợ PHP và MySQL.
+Ưu điểm:
+Giấy phép sử dụng miễn phí
+Tài liệu hướng dẫn chuyên sâu
+Dễ dàng cài đặt
+Gọn gàng và đơn giản
+Nhược điểm:
+Gói cước trả phí khá mắc
+Phiên bản miễn phí có dấu watermark “powered by”
+
+⇒ Thiết lập một forum online giống như tạo bất kỳ website. Bạn cần một host chuyên cho diễn đàn và phần mềm có đầy đủ chức năng mà bạn cần. Cho các phần mềm sẵn sàng sử dụng mà không phải đắn đo là phpBB hay WordPress nhờ vào hệ thống tính năng đầy đủ của nó
+
+Cài đặt hệ điều hành linux trên hệ thống máy ảo (virtualBox)
+Bạn truy cập vào trang https://www.virtualbox.org/ và download VirtualBox và tiến hành cài đặt trên hệ điều hành Windows
+Bạn truy cập vào trang https://ubuntu.com/ và download bản ubuntu 18.04 LTS
+Tiến hành cài đặt Ubuntu trên virtualBox
+Bước 1: Mở phần mềm virtualBox
+
+Bước 2: Chọn New để tạo và cài đặt máy ảo
+
+Bước 3: Đặt tên máy ảo, chọn hệ điều hành bạn sử dụng và chọn “Next”
+
+
+Bước 4: Chọn dung lượng bộ nhớ máy ảo sử dụng và chọn “Next”
+
+
+
+
+Bước 5: Chọn “Next” để tạo ổ cứng ảo
+
+Bước 6: Chọn “Fixed-Size Storage” (Kho lưu trữ dung lượng cố định) hoặc “Dynamically Expanding Storage” (Kho lưu trữ có thể mở rộng dung lượng) tùy thuộc vào nhu cầu bạn sử dụng. Ở đây mình chọn “Dynamically Expanding Storage” và nhấn “Next”
+
+Bước 7: Chỉnh dung lượng ổ cứng ảo và chọn “Create”
+
+Bạn sẽ thấy máy ảo mới trong danh sách
+Bước 8: Thiết lập khởi động CD
+Chọn máy ảo vừa tạo, sau đó nhấp chuột vào nút “Setting”
+
+Chọn tab “Storage” để chọn ISO ubuntu để cài đặt sau đó nhấn “OK”
+
+Bước 9: Cài đặt Ubuntu
+Khởi động máy ảo ubuntu bằng cách nhấn “Start”, Máy sẽ khởi động từ ISO được chọn và bạn tiến hành cài đặt
+
+Bạn có thể chọn dùng thử Ubuntu mà không cần cài đặt hoặc chọn cài đặt Ubuntu. Ở đây tôi sẽ chọn Install Ubuntu. Sau khi chọn “Install Ubuntu” bạn sẽ cần chọn bố cục bàn phím rồi nhấp chuột vào “Continue”
+
+Ở màn hình tiếp theo bạn chọn “Continue” để tiếp tục tiến hành cài đặt
+
+Tùy chọn tiếp theo sẽ hỏi bạn muốn xóa toàn bộ dữ liệu và cài đặt hay tạo phân vùng riêng tùy chọn “Something Else”. Bạn nên chọn Erase disk and install Ubuntu
+
+Chọn “Continue” trong màn hình tiếp theo
+
+Bạn tiến hành chọn múi giờ trong bản đồ và chọn “Continue”
+
+Nhập thông tin người dùng và nhấp chuột vào “Continue”
+
+Chờ Ubuntu cài đặt và sao chép các file
+
+Sau khi hoàn tất cài đặt, nhấp chuột vào “Restart Now” để kết thúc quá trình cài đặt
+
+Cài đặt phpBB
+Giới thiệu qua phpBB
+Có nhiều forum scripts mà bạn có thể chọn và phpBB là một trong số đó. Cái tên phpBB là viết tắt của PHP Bulletin Board. Nó miễn phí và là mã nguồn mở có thể được dùng trong chính forum của bạn. Script được cung cấp với nhiều ngôn ngữ có sẵn và sẽ tạo board, topics, quản lý users, group,.. Có nhiều cách khác nhau để cài phpBB forum như “ Cài đặt thủ công, Cài qua Hostinger Auto Installer, Cài qua Softaculous ”. Trong bài này mình sẽ hướng dẫn bạn cài đặt thủ công phpBB, nếu bạn muốn biết thêm về 2 cách cài qua Hostinger Auto Installer và Softaculous thì bạn đọc qua bài viết ở link sau: “https://www.hostinger.vn/huong-dan/lam-the-nao-de-cai-dat-phpbb/”
+Bạn cần chuẩn bị những gì?
+Truy cập vào tài khoản hosting
+Tài khoản hosting của bạn cần đáp ứng những điều sau
+Một máy chủ web hoặc tài khoản lưu trữ web chạy trên bất kỳ một Hệ điều hành chính nào đó có hỗ trợ cho PHP
+Một hệ thống cơ sở dữ liệu “MySQL 3.23 trở lên (hỗ trợ MySQLi), MariaDB 5.1 trở lên, PostgreQuery 8.3+, SQLite 3.615+, MS SQL Server 2000 trở lên (thông qua ODBC hoặc bộ điều hợp gốc), Oracle”
+PHP 5.4.7 nhưng ít hơn PHP 7.3 với sự hỗ trợ cho CSDL bạn định sử dụng
+Các module PHP bắt buộc như json, …
+Hàm getimagesize() phải được bật
+Sự hiện diện của các module sau trong PHP sẽ cung cấp truy cập vào các tính năng bổ sung, nhưng chúng không bắt buộc như “Hỗ trợ nén zlib, hỗ trợ FTP từ xa, hỗ trợ XML, hỗ trợ GD”
+Nếu máy chủ hoặc tài khoản lưu trữ của bạn không đáp ứng các yêu cầu ở trên thì bạn sẽ không thể cài đặt phpBB 3.2.x
+Truy cập vào FTP/File Manager
+Hướng dẫn cài qua hệ điều hành ubuntu trên virtualBox
+PhpBB là một ứng dụng phần mềm dựa trên đám mây cung cấp năng lượng cho hầu hết các diễn đàn thảo luận phổ biến trên internet hiện nay
+Ứng dụng mã nguồn mở có khả năng tùy biến cao với hàng ngàn kiểu dáng và gói hình ảnh. PhpBB được hỗ trợ rộng rãi bởi các nhà phát triển, những người duy trì một cơ sở dữ liệu rộng lớn gồm các phần mở rộng khác nhau để cung cấp các chức năng tuyệt vời
+Bước 1: Cài đặt máy chủ web
+phpBB yêu cầu một máy chủ web để chạy. Bạn cần cài đặt một máy chủ web Apache2 hoặc Nginx… Trong bài hướng dẫn này mình sẽ cài đặt Apache server
+Trước tiên bạn cần update lại kho lưu trữ gói Ubuntu qua câu lệnh sau
+$ sudo apt-get update
+
+Sau đó để cài đặt Apache server thì bạn chạy lệnh sau
+$ sudo apt-get install apache2
+
+Sau đó bạn nhập Y và nhấn Enter khi bạn được nhắc để xác nhận cài đặt
+Sau khi cài đặt xong Nginx, bạn chạy các lệnh sau để dừng, khởi động và kích hoạt dịch vụ Nginx
+$ sudo systemctl stop apache2
+$ sudo systemctl start apache2
+$ sudo systemctl enable apache2
+
+Để test xem apache đã được cài đặt chưa, bạn mở trình duyệt của bạn và duyệt đến tên máy chủ hoặc địa chỉ IP của máy chủ và bạn sẽ thấy trang kiểm tra mặc định của Apache như hình sau
+
+Bước 2: Cài đặt MariaDB Database Server
+phpBB dựa trên máy chủ MySQL/ MariaDB để lưu trữ dữ liệu. Trong hướng dẫn này, mình sẽ cài đặt MariaDB và để cài đặt MariaDB bạn hãy chạy lệnh sau
+$ sudo apt-get install mariadb-server mariadb-client
+
+Sau đó bạn nhập Y và nhấn Enter khi bạn được nhắc để xác nhận cài đặt
+Sau khi cài đặt xong MariaDB, bạn chạy các lệnh sau để dừng, khởi động và kích hoạt dịch vụ MariaDB
+$ sudo systemctl stop mariadb
+$ sudo systemctl start mariadb
+$ sudo systemctl enable mariadb
+
+Sau đó chạy lệnh sau
+$ sudo mysql_secure_installation
+
+Trả lời các câu hỏi bên dưới khi được nhắc
+Enter current password for root (enter for none): # Chỉ cần nhấn Enter
+Set root password? [Y/n] Y
+New password: # Nhập mật khẩu cho tài khoản root
+Re-enter new password: # Nhập lại mật khẩu bạn vừa nhập ở trên
+Remove anonymous users? [Y/n]: Y
+Disallow root login remotely? [Y/n]: Y
+Remove test database and access to it? [Y/n]: Y
+Reload privilege tables now? [Y/n]: Y
+
+Sau đó restart lại MariaDB server bằng câu lệnh
+$ sudo systemctl restart mariadb.service
+
+Nếu bạn muốn kiểm tra xem MariaDB đã được cài đặt chưa, bạn nhập lệnh dưới đây để đăng nhập vào server MariaDB
+$ sudo mysql -u root -p
+
+Sau đó nhập mật khẩu root bạn vừa thực hiện tạo ở bước trên
+
+Xong việc cài đặt MariaDB
+
+Bước 3: Cài đặt các gói PHP bắt buộc
+Bạn chạy lệnh sau để cài đặt các gói PHP bắt buộc ( phiên bản php bạn cần cài là 7.2 )
+Trước tiên bạn cần update lại kho lưu trữ gói Ubuntu qua câu lệnh sau
+$ sudo apt-get update
+
+Sau đó, chạy lệnh sau để cài đặt các gói PHP được yêu cầu
+
+$ sudo apt install php7.2 libapache2-mod-php7.2 php7.2-common php7.2-curl php7.2-intl php7.2-mbstring php7.2-xmlrpc php7.2-mysql php7.2-gd php7.2-pgsql php7.2-xml php7.2-cli php7.2-imagick php7.2-bcmath php7.2-gmp php7.2-zip
+
+Sau khi cài đặt PHP 7.2, bạn chạy câu lệnh sau để mở file config PHP mặc định của Nginx rồi thay đổi các dòng dưới trong file rồi lưu
+$ sudo nano /etc/php/7.2/apache2/php.ini
+
+file_uploads = On
+allow_url_fopen = On
+short_open_tag = On
+memory_limit = 256M
+cgi.fix_pathinfo = 0
+upload_max_filesize = 100M
+max_execution_time = 360
+date.timezone = Asia/Ho_Chi_Minh
+
+Sau khi thực hiện các thay đổi ở trên thì bạn lưu file lại và đóng
+Thực hiện restart Nginx qua câu lệnh
+$ sudo systemctl restart mariadb.service
+
+Bước 4: Tạo phpBB database
+Sau khi bạn cài đặt tất cả cái gói được yêu cầu, tiếp tục bên dưới để bắt đầu định cấu hình máy chủ. Đầu tiên bạn tạo cơ sở dữ liệu phpBB.
+Chạy các lệnh sau để đăng nhập vào MariaDB. Khi được nhắc nhập mật khẩu, bạn hãy nhập mật khẩu root của bạn khi bạn tạo ở trên
+
+$ sudo mysql -u root -p
+
+Sau đó bạn tạo một cơ sở dữ liệu có tên gọi tùy ý, mình sẽ tạo csdl có tên là myforum qua câu lệnh sau
+CREATE DATABASE myforum;
+
+Tiếp, bạn tạo một người dùng CSDL có tên tùy ý với mật khẩu tùy ý
+CREATE USER ‘admin’@’localhost’ IDENTIFIED BY ‘trung1009@’;
+
+Sau đó bạn cần cấp cho người dùng đó quyền truy cập đầy đủ vào cơ sở dữ liệu qua câu lệnh
+GRANT ALL ON myforum.* TO ‘admin’@’localhost’ WITH GRANT OPTION;
+
+Cuối cùng, lưu các thay đổi của bạn và thoát
+FLUSH PRIVILEGES;
+EXIT;
+
+Bước 5: Cài đặt phpBB phiên bản 7.2
+Môi trường máy chủ của chúng tôi đã sẵn sàng để chạy phpBB. Bây giờ chúng ta có thể tiếp tục và tải xuống phần mềm bảng thông báo bằng lệnh wget Linux .
+Đầu tiên, điều hướng đến thư mục thư mục /var/www/html bằng lệnh CD:
+$ cd /var/www/html
+
+Sau đó, sử dụng lệnh wget để tải xuống phiên bản phpBB-3.2.2
+$ sudo wget https://www.phpbb.com/files/release/phpBB-3.2.2.zip
+
+Sau khi tải xong chúng ta sẽ nén tập này và gửi nội dung đến thư mục gốc của máy chủ web
+
+$ sudo apt-get install unzip
+$ sudo unzip phpBB-3.2.2.zip
+
+Tiếp theo, bạn sửa đổi quyền thư mục để phù hợp với cấu hình Apache2
+$ sudo chown -R www-data: www-data /var/www/html/phpbb
+$ sudo chmod -R 755 /var/www/html/phpbb
+
+
+Bước 6: Cấu hình file Apache2
+Đây là bước cuối cùng, cấu hình tệp trang Nginx cho phpBB. Tập tin này sẽ kiểm soát cách người dùng truy cập nội dung phpBB. Chạy lệnh sau để tạo một tệp cấu hình mới có tên gọi phpbb.conf
+$ sudo nano /etc/apache2/sites-available/phpbb.conf
+
+Sau đó nhập nội dung dưới đây vào tập tin và lưu lại. Thay thế các từ được tô sáng bằng tên miền riêng của bạn và vị trí thư mục gốc
+<VirtualHost *:80>
+     ServerAdmin admin@example.com
+     DocumentRoot /var/www/phpbb
+     ServerName example.com
+     ServerAlias www.example.com
+
+     <Directory /var/www/phpbb/>
+          Options FollowSymlinks
+          AllowOverride All
+          Require all granted
+     </Directory>
+
+     ErrorLog ${APACHE_LOG_DIR}/error.log
+     CustomLog ${APACHE_LOG_DIR}/access.log combined
+    
+</VirtualHost>
+
+
+
+Bước 7: Kích hoạt module phpBB và rewrite
+Sau khi thực hiện xong bước cấu hình, hãy bật nó bằng cách chạy lệnh sau
+$ sudo a2ensite phpbb.conf
+$ sudo a2enmod rewrite
+$ sudo systemctl restart apache2.service
+
+Bước 8: Khởi động lại Nginx
+Để tải tất cả các cài đặt ở trên, hãy khởi động lại Nginx bằng cách chạy lệnh sau
+$ sudo systemctl restart apache2
+
+Sau đó bạn mở trình duyệt của bạn và duyệt đến tên miền máy chủ của bạn vừa đặt ở file trên theo sau là /install
+http://ipaddress/install
+
+Nếu thành công bạn sẽ thấy trình hướng dẫn thiết lập phpBB
+Sau đó thực hiện cài đặt phpBB
+Hiện tại mình đang ở trang cài đặt phpbb, việc đầu tiên bạn cần làm là chọn vào phần Install
+
+Sau đó bạn chọn tiếp phần Install ở dưới và sau đó bạn sẽ thấy trang yêu cầu bạn nhập thông tin quản trị cho diễn đàn mà bạn muốn tạo
+
+Administrator username: là tên đăng nhập của tài khoản quản trị viên trong trang forum của bạn
+Contact email address: nhập email của bạn để nó quản lý, việc này có ý nghĩa rất lớn khi bạn cài đặt trên hosting trên internet, bởi vì nó sẽ liên hệ cho bạn và xem các thông tin thông qua email của bạn
+Administrator password: nhập password cho tài khoản quản trị
+Confirm Administrator password: nhập lại password của tài khoản quản trị
+
+Sau đó bạn nhấn nút Submit
+Đến bước tiếp theo, đây là bước quan trọng bạn phải nhập thông tin đầy đủ cho phần cấu hình này để thực hiện việc cài đặt
+
+Đầu tiên đó là Database server hostname or DSN: các bạn chỉ cần nhập localhost
+Database server port: bạn không cần nhập
+Database username: bạn nhập tên đăng nhập của tài khoản mà bạn tạo ở bước tạo cơ sở dữ liệu phpbb
+Database password: bạn nhập mật khẩu của tài khoản mà bạn tạo ở bước tạo cơ sở dữ liệu phpbb
+Database name: bạn nhập tên cơ sở dữ liệu mà bạn tạo ở bước tạo cơ sở dữ liệu phpbb
+
+Prefix for tables in database: đây là mục quan trọng vì nó sẽ giúp bạn bảo vệ cơ sở dữ liệu của bạn tốt hơn, sau đó bạn nhấn vào nút submit
+Ở bước tiếp theo, bạn sẽ chấp nhận cài đặt cấu hình máy chủ và tiếp tục
+
+Bạn nhấn nút submit và tiếp tục cài đặt, ở bước này bạn chưa cấu hình cho dịch vụ mail và bạn có thể bỏ qua.
+
+Bạn nhấn nút Submit và sẽ thấy trang sau
+
+Sau đó bạn nhấn nút Submit và đợi đến khi cài đặt xong
+Sau khi cài đặt hoàn tất, bạn mở trình duyệt của bạn và duyệt đến tên miền máy chủ của bạn
+
+Như vậy mình đã cài đặt xong phpbb
+
+Hướng dẫn sử dụng phpBB
+Bước đầu tiên khi bạn muốn thực hiện sử dụng trang forum qua phpBB thì bạn phải xóa hoặc đổi tên file install trong thư mục phpbb của bạn. Nếu bạn muốn xóa file install thì bạn chạy câu lệnh sau
+$ cd /var/www/html/phpbb
+$ sudo rm -rf install
+
+
+Tìm hiểu thêm
+Cài đặt Apache2 để làm gì?
+Apache là một phần mềm web server miễn phí mã nguồn mở. Các yêu cầu được gửi tới máy chủ sử dụng thông qua giao thức HTTP. Khi bạn sử dụng trình duyệt này, bạn chỉ cần nhập địa chỉ IP hoặc URL và nhấn ENTER. Sau đó, máy sẽ tiếp nhận địa chỉ IP hoặc URL mà bạn nhập. Chức năng này có được là do cài đặt trên web server.
+
+Vậy Web Server là gì?
+Phần mềm server chứa tổng hợp các dạng server khác nhau như : File Servers, Mail Server, Database Server. Mỗi ứng dụng server khác nhau đều cung cấp một khả năng truy cập riêng trên server vật lý và sử dụng với nhiều mục đích khác nhau
+Riêng web server thì nhiệm vụ là đưa website lên mạng internet dựa trên tính năng hoạt động như kết nối giữa server và máy khách. Đó là nguyên lý kéo nội dung từ server về cho mỗi truy vấn được xuất phát từ chính máy khách nhằm mục đích hiển thị kết quả tương ứng với dạng thức như một website
+Cách thức hoạt động của Apache Web Server?
+Apache Web Server chạy trên chính phần mềm của mình chứ không phải là server vật lý. Với nhiệm vụ chủ yếu là thiết lập kết nối, liên kết giữa server và browser rồi chuyển file giữa chúng (cấu trúc hai chiều client-server). Ngoài ra, nó cũng là một đa nền tảng được hoạt động khá mượt mà trên UNIX và Windows
+Khi người dùng tiến hành tải site lên web, trình duyệt sẽ gửi đi 1 request tải trang lên phía server. Apache có nhiệm vụ trả lại kết quả đầy đủ các file, thành phần để hiển thị các trang About Us Server và client giao tiếp qua HTTP protocol
+Không dừng lại ở đó, apache còn là nền tảng module với độ tùy biến cao và chuẩn. Module sẽ cho phép admin của server thực hiện các chế độ như tắt hoặc thêm vào các chức năng. Apache với công dụng sở hữu các chức năng modules mang tính bảo mật caching, chứng thực mật khẩu tuyệt đối
+
+Cài MariaDB server để làm gì?
+Để tạo, thêm, sửa và quản lý dữ liệu trong database
+
+Lý do chọn MariaDB?
+- Mã nguồn mở (miễn phí)
+- Được bảo trì bởi người tạo ra MySQL
+- Hoàn toàn tương thích với MySQL
+- Nhiều tính năng hay (Nếu bạn muốn biết thêm các tính năng của MariaDB thì truy cập vào link sau: https://mariadb.com/kb/en/mariadb/gis-functionality/)
+- Nhiều Engine lưu trữ
+- Kết hợp 2 thế giới SQL và NoSQL
+- Tối ưu tốc độ
+
+Làm sao để tạo một forum nhanh chóng mà không bị mất phí
+Bước 1: Chọn máy chủ web cho forum
+Điều cần làm đầu tiên là bạn phải lựa chọn nền tảng lưu trữ cho website của bạn, cụ thể bạn đã trả một khoản chi phí hợp lý hay chưa, máy chủ của bạn chạy tốt như nào và liệu máy chủ có thể quản lý diễn đàn hiệu quả không khi nó phát triển cộng đồng lớn
+Nếu bạn chấp nhận sử dụng một nền tảng lưu trữ web nào đó, bạn tiến hành dùng tool giám sát thời gian hoạt động để chắc rằng lưu trữ của bạn vẫn được vận hành hoàn hảo, giúp website của bạn hoạt động 24/7. Ngoài ra, trong quá trình làm việc, bạn nên thường xuyên giao tiếp với những đơn vị hosting để chia sẻ mong muốn của bạn dành cho diễn đàn mình và yêu cầu họ có giải pháp quản lý Forum để sở hữu lưu lượng truy cập lớn và ổn định cho Forum của bạn
+Đồng thời, bạn hãy xem xét các khoản phí nâng cấp liên quan khác khi Forum của bạn trở nên lớn mạnh hơn. Như bạn cần có VPS hoặc nền tảng lưu trữ đặc biệt để xử lý lưu lượng truy cập diễn đàn
+Bước 2: Thiết lập diễn đàn bằng các phần mềm miễn phí
+Các phần mềm miễn phí để tạo forum bạn có thể dùng là Muut, phpBB, Simple Machines Forum, vBulletin, MyBB, Kunena, bbPress, Vanilla
+Bước 3: Tạo nội quy forum
+Khi bạn có được phần mềm tạo diễn đàn, bạn cần có một bảng nội quy để kiểm soát hành vi trên forum
+Chống phân biệt đối xử
+Quy tắc duyệt bài đăng
+Liên kết ngoài
+Chống ngôn ngữ thô tục
+Chống spam, quảng cáo
+Bước 4: Sắp xếp chủ đề Forum
+Chọn chủ đề là một thao tác dễ dàng, nhưng bạn phải cân nhắc xem những chủ đề bạn muốn đề cập hôm nay cũng như những chủ đề trong tương lai
+Bước 5: Quản lý Forum
+Giữ liên lạc với các thành viên của bạn
+Tạo vùng an toàn
+Cấm các thành viên lạm dụng
+
+C. Tài liệu tham khảo
+
+https://vi.wikipedia.org/wiki/Linux
+https://vi.wikipedia.org/wiki/Di%E1%BB%85n_%C4%91%C3%A0n_tr%E1%BB%B1c_tuy%E1%BA%BFn
+https://www.hostinger.vn/huong-dan/phan-mem-tao-forum-tot-nhat/
+http://www.makeforum.org/forum-la-gi-cach-tao-forum/
